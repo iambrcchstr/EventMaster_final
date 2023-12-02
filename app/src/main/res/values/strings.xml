@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EventMaster</string>
+
+    <string name="greet">Get ready to bring your event to life. Let\'s make it unforgettable together! Add your event and let the magic begin!</string>
+</resources>
