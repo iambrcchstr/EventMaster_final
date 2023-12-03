@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.widget.Button;
+import android.widget.ImageButton;
 
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -29,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
 
         addEventBtn = findViewById(R.id.add_event_button);
         btnPackage=findViewById(R.id.btn_package);
-        btnVenue =findViewById(R.id.btn_venue);
         recyclerView = findViewById(R.id.rv_id);
+        btnVenue=findViewById(R.id.btn_venue);
 
         addEventBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, AddRecord.class)));
         btnPackage.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, MainPackage.class)));

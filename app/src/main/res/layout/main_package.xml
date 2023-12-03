@@ -12,7 +12,6 @@
         android:layout_width="79dp"
         android:layout_height="71dp"
         android:background="@null"
-
         android:src="@drawable/back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

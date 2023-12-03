@@ -9,8 +9,8 @@
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="400dp"
-        android:layout_height="152dp"
+        android:layout_width="381dp"
+        android:layout_height="151dp"
         android:background="@color/my_color"
         app:layout_constraintDimensionRatio="16:9">
 

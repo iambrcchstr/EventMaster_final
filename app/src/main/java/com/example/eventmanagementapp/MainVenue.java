@@ -7,15 +7,15 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 
 public class MainVenue extends AppCompatActivity {
-    ImageButton backbtn;
+    ImageButton backbton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_package);
+        setContentView(R.layout.activity_venues);
 
-        backbtn = findViewById(R.id.back_venue);
+        backbton = findViewById(R.id.back_venue_btn);
 
-        backbtn.setOnClickListener(v -> startActivity(new Intent(MainVenue.this, MainActivity.class)));
+        backbton.setOnClickListener(v -> startActivity(new Intent(MainVenue.this, MainActivity.class)));
 
 
     }
