@@ -8,6 +8,8 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -34,7 +36,7 @@ public class AddRecord extends AppCompatActivity {
         ev_time = findViewById(R.id.event_time_text);
         ev_date = findViewById(R.id.event_date_text);
         ev_loc = findViewById(R.id.event_loc_text);
-        ev_type =findViewById(R.id.event_type_text);
+        ev_type =findViewById(R.id.event_type_dropdown);
         ev_people = findViewById(R.id.event_attendees_text);
 
         save_event = findViewById(R.id.save_event_btn);
@@ -42,6 +44,8 @@ public class AddRecord extends AppCompatActivity {
 
         ev_date.setOnClickListener(view -> showCalendar());
         ev_time.setOnClickListener(view -> showClockTime());
+
+
 
         back_event.setOnClickListener(v -> startActivity(new Intent(AddRecord.this, MainActivity.class)));
 

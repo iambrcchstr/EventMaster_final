@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -51,7 +53,6 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel, MainAdapter.
         holder.loc.setText(model.getE_loc());
         holder.peeps.setText(model.getG_people());
         holder.type.setText(model.getF_type());
-
 
         holder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -187,14 +188,14 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel, MainAdapter.
                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
                                         public void onSuccess(Void unused) {
-                                            Toast.makeText(holder.name.getContext(), "Tally Updated!", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(holder.name.getContext(), "Event Updated!", Toast.LENGTH_SHORT).show();
                                             dialogPlus.dismiss(); // Dismiss the dialog after successful update
                                         }
                                     })
                                     .addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            Toast.makeText(holder.name.getContext(), "Error updating tally", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(holder.name.getContext(), "Error updating event", Toast.LENGTH_SHORT).show();
                                         }
                                     });
                         }
@@ -226,11 +227,12 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel, MainAdapter.
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.event, parent, false);
+
         return new myViewHolder(view);
     }
 
     class myViewHolder extends RecyclerView.ViewHolder {
-        TextView name, date, time, loc, peeps, type;
+        TextView name, date, time, loc, peeps,type;
         ImageButton btnDelete, btnEdit;
 
         public myViewHolder(@NonNull View itemView) {
@@ -244,6 +246,7 @@ public class MainAdapter extends FirebaseRecyclerAdapter<MainModel, MainAdapter.
 
             btnDelete = itemView.findViewById(R.id.imgBtn_Delete);
             btnEdit = itemView.findViewById(R.id.imgBtn_Edit);
+
 
         }
 

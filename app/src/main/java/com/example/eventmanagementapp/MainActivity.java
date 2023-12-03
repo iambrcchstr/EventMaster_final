@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageButton;
+import android.widget.Button;
+
 
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     FloatingActionButton addEventBtn;
     RecyclerView recyclerView;
+    Button btnPackage, btnVenue;
     MainAdapter v_mainAdapter;
 
 
@@ -25,12 +27,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        recyclerView = findViewById(R.id.rv_id);
         addEventBtn = findViewById(R.id.add_event_button);
-
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        btnPackage=findViewById(R.id.btn_package);
+        btnVenue =findViewById(R.id.btn_venue);
+        recyclerView = findViewById(R.id.rv_id);
 
         addEventBtn.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, AddRecord.class)));
+        btnPackage.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, MainPackage.class)));
+        btnVenue.setOnClickListener(v -> startActivity(new Intent(MainActivity.this, MainVenue.class)));
+
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         FirebaseRecyclerOptions<MainModel> options =
                 new FirebaseRecyclerOptions.Builder<MainModel>()

@@ -13,17 +13,17 @@
         android:theme="@style/Theme.EventManagementApp"
         tools:targetApi="31">
         <activity
-            android:name=".main_event"
+            android:name=".MainVenue"
+            android:exported="false"/>
+        <activity
+            android:name=".MainPackage"
             android:exported="false" />
         <activity
-            android:name=".ViewEvent"
-            android:exported="false"></activity>
-        <activity
             android:name=".AddRecord"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".SplashScreen"
             android:exported="true">

@@ -82,7 +82,7 @@
             android:textColor="@color/black"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/textView"
@@ -101,8 +101,7 @@
             android:layout_marginVertical="8dp"
             android:background="@drawable/input_background"
             android:ems="10"
-            android:hint="MM-DD-YYYY"
-            android:inputType="date"
+            android:inputType="none"
             android:textColor="@color/black"
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
@@ -124,7 +123,7 @@
             android:layout_height="30dp"
             android:layout_marginVertical="8dp"
             android:paddingEnd="10dp"
-            android:inputType="time"
+            android:inputType="none"
             android:paddingStart="10dp"
             android:background="@drawable/input_background"
             android:ems="10"
@@ -135,7 +134,7 @@
             android:id="@+id/textView9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="LOCATION"
+            android:text="PACKAGE"
             android:paddingStart="10dp"
             android:paddingTop="5dp"
             android:textColor="@color/black"
@@ -166,18 +165,17 @@
             android:textSize="12sp" />
 
         <EditText
-            android:id="@+id/event_type_text"
+            android:id="@+id/event_type_dropdown"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginVertical="8dp"
             android:background="@drawable/input_background"
             android:ems="10"
-            android:paddingEnd="10dp"
             android:paddingStart="10dp"
-            android:inputType="text"
+            android:paddingEnd="10dp"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
-            android:textSize="18sp" />
+            android:textSize="18sp"  />
 
         <TextView
             android:id="@+id/textView99"
